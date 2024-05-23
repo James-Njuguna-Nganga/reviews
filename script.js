@@ -40,7 +40,7 @@ const random = document.querySelector('.random');
 
 let currentItem = 0;
 
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded',  () => {
   showPerson(currentItem);
 });
 
@@ -52,7 +52,7 @@ function showPerson(person) {
   experience.textContent = item.text;
 }
 
-next.addEventListener('click', function () {
+next.addEventListener('click',  () => {
   currentItem++;
   if (currentItem > reviews.length - 1) {
     currentItem = 0;
@@ -60,7 +60,7 @@ next.addEventListener('click', function () {
   showPerson(currentItem);
 });
 
-prev.addEventListener('click', function () {
+prev.addEventListener('click',  () => {
   currentItem--;
   if (currentItem < 0) {
     currentItem = reviews.length - 1;
@@ -68,7 +68,7 @@ prev.addEventListener('click', function () {
   showPerson(currentItem);
 });
 
-random.addEventListener('click', function () {
+random.addEventListener('click',  () => {
   currentItem = Math.floor(Math.random() * reviews.length);
   showPerson(currentItem);
 });
